@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MusicOn</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_playlist">Playlist</string>
+    <string-array name="examples">
+        <item>Hello can anybody hear me</item>
+        <item>what the hell</item>
+    </string-array>
+    <string name="title_activity_stream_">Stream_Activity</string>
+    <string name="title_activity_stream_list">Stream_list</string>
+</resources>

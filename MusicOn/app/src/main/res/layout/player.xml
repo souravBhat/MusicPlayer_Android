@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <include layout="@layout/app_bar" android:id="@+id/toolbar"/>
+
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:id="@+id/player_header"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="6dp"
+        >
+
+        <!-- the song title-->
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/accentColor"
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:text="The Good, The Bad And The Ugly"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <!-- Picture-->
+
+    <LinearLayout
+        android:id="@+id/player_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:layout_below="@id/player_header"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/center_image"/>
+    </LinearLayout>
+
+
+
+    <!--Timer display -->
+    <LinearLayout
+        android:id="@+id/timerDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:background="@null"
+        android:layout_below="@id/player_image">
+
+        <TextView
+            android:id="@+id/currentSongTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:text="0:00"
+
+            />
+
+        <TextView
+            android:id="@+id/totalSongTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:text="0:00"
+            />
+
+
+    </LinearLayout>
+
+
+    <!-- Seekbar-->
+    <!-- android:thumb="@drawable/seekbar_thumb"-->
+    <SeekBar
+        android:id="@+id/songProgress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/timerDisplay"
+        android:progress="0"
+        android:max="100"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"/>
+
+
+
+    <!-- player footer-->
+
+    <LinearLayout
+        android:id="@+id/player_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/songProgress"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:background="@color/primaryColor">
+
+
+
+            <ImageButton
+                android:id="@+id/play_btn"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/btn_play"
+                android:background="@null"
+                android:layout_weight="1"
+               />
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
